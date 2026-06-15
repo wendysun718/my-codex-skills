@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+cookies.json
+credentials.json
+secrets.json
+*.log
+scored-products.csv
+candidates.csv
