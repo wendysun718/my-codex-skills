@@ -1,4 +1,6 @@
 interface:
   display_name: "妙手 TikTok 选品上架助手"
-  short_description: "从妙手筛选商品、核算利润并安全上架 TikTok Shop"
-  default_prompt: "Use $miaoshou-tiktok-operator to screen products in Miaoshou ERP and prepare a reviewed TikTok Shop Malaysia listing."
+  short_description: "妙手选品、利润核算、商品草稿与审核后安全上架"
+  default_prompt: "使用 $miaoshou-tiktok-operator，从妙手 ERP 筛选适合马来西亚的商品，计算完整利润并先生成审核清单，不要直接发布。"
+policy:
+  allow_implicit_invocation: true

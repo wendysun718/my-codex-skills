@@ -7,6 +7,70 @@ description: Operate a logged-in Miaoshou ERP workflow for TikTok Shop Malaysia 
 
 Use the user's logged-in Miaoshou ERP session to turn product candidates into reviewed TikTok Shop Malaysia listings. Treat product publishing as an external side effect: prepare first, show the exact listing and shop target, then obtain confirmation immediately before publishing.
 
+## Skill Details
+
+### Purpose
+
+Help a cross-border ecommerce seller move from product discovery to a reviewed TikTok Shop listing without relying on source price alone. Combine market fit, product economics, supplier confidence, content potential, compliance risk, and publishing safety.
+
+### Intended Users
+
+Use this skill for:
+
+- Early-stage TikTok Shop sellers who need more qualified products
+- Sellers using Miaoshou ERP for collection, claiming, editing, or publishing
+- Operators testing low-price traffic products without accepting hidden losses
+- Non-technical users who want Codex to handle the operational breakdown
+- Teams that require human review before any product becomes public
+
+### Core Capabilities
+
+- Search and collect visible candidate data from a logged-in Miaoshou ERP session
+- Screen products for Malaysian weather, lifestyle, outdoor, travel, and daily-use contexts
+- Estimate contribution profit after purchasing, shipping, fees, commission, discounts, packaging, returns, and ads
+- Score products by market fit, short-video demonstration value, supplier quality, competition, economics, and risk
+- Classify products as traffic, profit, bundle, or test products
+- Prepare TikTok Shop titles, descriptions, categories, attributes, variants, prices, stock, and content angles
+- Stage listings as drafts and publish only an explicitly approved product or batch
+- Review post-listing performance and recommend whether to keep, revise, bundle, or stop a test
+
+### Expected Inputs
+
+Use the information already available in the user's message and logged-in pages. Useful inputs include:
+
+- Target market and shop
+- Product category or customer scenario
+- Planned selling price
+- Product, shipping, handling, and packaging costs
+- Platform fee, affiliate commission, voucher, refund, and advertising assumptions
+- Desired number of candidates or approved products
+
+Do not block a read-only research task when some costs are missing. Use clearly labeled estimates and identify which numbers need later confirmation.
+
+### Standard Outputs
+
+Produce:
+
+- A concise Chinese business summary
+- A candidate or approved-product table
+- Product role and recommendation
+- Estimated total cost, contribution profit, and margin
+- Market-fit, video potential, supplier, competition, and risk assessment
+- Missing-information blockers
+- Listing copy and short-video angle when requested
+- A final pre-publish review for any external publishing action
+
+### Success Criteria
+
+Consider the task complete only when:
+
+- The target market and shop are verified for publishing tasks
+- Costs and assumptions are visible rather than hidden
+- Loss-making and high-risk products are excluded or clearly held
+- The selected assortment has a coherent customer or use-case theme
+- Listing fields are checked for accuracy and unsupported claims
+- Any approved publish action has a visibly verified result
+
 ## Required Tools
 
 Use the Browser plugin for Miaoshou ERP and TikTok Shop pages. If the user explicitly asks to use Chrome because the login exists there, use the Chrome plugin instead.
@@ -176,6 +240,21 @@ Report failures plainly and leave the product in draft when possible.
 - `复盘模式`: Read product views, clicks, orders, and margin; recommend keep, revise, bundle, or remove.
 
 Default to `调研模式` when the user's instruction is ambiguous.
+
+## Example Requests
+
+- `使用 $miaoshou-tiktok-operator，在妙手 ERP 里找20款适合马来西亚雨季和户外场景的商品，只做筛选和利润计算。`
+- `使用 $miaoshou-tiktok-operator，把批准的商品整理成 TikTok Shop Malaysia 草稿，不要发布。`
+- `使用 $miaoshou-tiktok-operator，检查这批低价袜子扣除物流和达人佣金后是否值得做引流款。`
+- `使用 $miaoshou-tiktok-operator，复盘现有商品的浏览、点击和订单表现。`
+
+## Limitations
+
+- Treat fee, shipping, return, and advertising defaults as estimates until the user verifies them.
+- Expect Miaoshou ERP and TikTok Shop interfaces, categories, fees, and rules to change.
+- Do not provide legal, tax, trademark, or platform-compliance guarantees.
+- Do not promise sales, traffic, ad eligibility, or profit from adding products.
+- Use browser-visible workflows rather than assuming API access exists.
 
 ## Non-Negotiable Rules
 
