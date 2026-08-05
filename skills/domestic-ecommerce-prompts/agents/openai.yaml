@@ -1,0 +1,4 @@
+interface:
+  display_name: "国内电商提示词"
+  short_description: "生成国内电商商品图、图生视频和微信营销文案提示词。"
+  default_prompt: "帮我为这个商品生成国内电商图片提示词、朋友圈营销文案或带货短视频脚本。"

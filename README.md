@@ -8,6 +8,37 @@
 
 ## Skill 列表
 
+### 国内电商提示词
+
+**Skill ID：** `domestic-ecommerce-prompts`
+
+**适用平台：** 豆包、微信朋友圈、微信视频号、国内电商商品素材
+
+**状态：** 可用于生成中文商品图提示词、朋友圈营销文案和带货短视频脚本
+
+这个 Skill 用于把国内微信卖货和国内电商商品展示需求，整理成可直接复制到豆包使用的中文内容。
+
+它重点支持：
+
+- 商品主图提示词
+- 商品宣传图提示词
+- 商品功能细节图提示词
+- 朋友圈营销文案
+- 带货短视频脚本
+
+设计原则：
+
+- 输出中文提示词，直接给豆包看
+- 不默认生成冗长素材包，只生成用户选择的单个素材类型
+- 不输出九宫格规划、群聊话术或私聊话术
+- 保留产品图里的颜色、版型、结构、纹理和可见细节
+- 不编造销量、价格、库存、认证、材质比例或无法确认的功效
+- 朋友圈文案避免土味吆喝，偏内容营销和产品种草
+
+**Skill 文件夹：** [`skills/domestic-ecommerce-prompts`](skills/domestic-ecommerce-prompts)
+
+**详细执行规范：** [`SKILL.md`](skills/domestic-ecommerce-prompts/SKILL.md)
+
 ### 妙手 TikTok 选品上架助手
 
 **Skill ID：** `miaoshou-tiktok-operator`
@@ -116,6 +147,13 @@ https://github.com/wendysun718/my-codex-skills
 
 Codex 会使用 Skill 安装流程处理。也可以下载仓库 ZIP，再手动安装对应文件夹。
 
+安装国内电商提示词 Skill：
+
+```text
+请从这个 GitHub 仓库安装 skills/domestic-ecommerce-prompts：
+https://github.com/wendysun718/my-codex-skills
+```
+
 ### 手动安装
 
 将整个 `skills/miaoshou-tiktok-operator` 文件夹复制到：
@@ -124,9 +162,30 @@ Codex 会使用 Skill 安装流程处理。也可以下载仓库 ZIP，再手动
 ~/.codex/skills/miaoshou-tiktok-operator
 ```
 
+或将整个 `skills/domestic-ecommerce-prompts` 文件夹复制到：
+
+```text
+~/.codex/skills/domestic-ecommerce-prompts
+```
+
 然后重启 Codex。
 
 ## 使用示例
+
+### 生成国内电商商品图提示词
+
+```text
+使用 $domestic-ecommerce-prompts，为这款女装防晒衣生成商品宣传图提示词。
+目标客户是30-45岁女性，卖点是轻薄、防晒、不闷热、日常通勤好搭。
+提示词要给豆包看。
+```
+
+### 生成朋友圈营销文案
+
+```text
+使用 $domestic-ecommerce-prompts，为这款商品生成朋友圈营销文案。
+不要土味吆喝，突出产品特点、适合人群和日常场景。
+```
 
 ### 只做选品，不上架
 
