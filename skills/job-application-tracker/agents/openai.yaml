@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Tracker"
+  short_description: "Turn job posts into a bilingual Notion application tracker"
+  default_prompt: "Use $job-application-tracker to create my Notion tracker and organize these job postings with every JD requirement preserved."
